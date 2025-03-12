@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} About {% endblock title %}
+
+{% block content %}
+    
+    {% if not user.is_authenticated  %}
+        <br>
+        <a href="{% url 'home' %}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Go Back
+        </a>
+    {% endif %}    
+    
+    <!-- Header Section -->
+    <div class="text-center">
+        <h1 class="display-4" style="color: #4caf50; font-weight: bold;">IMS</h1>
+        <p class="lead" style="color: rgb(73, 73, 73);">An Inventory Management System</p>
+    </div>
+    <br><br>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2 class="section-heading"><i class="fas fa-info-circle"></i> About</h2>
+        <p class="about-text">
+            IMS is a simple inventory management software created for the requirements of a company.
+            The software is capable of keeping track of incoming and outgoing stock with a dynamically rendered bill. 
+            Each supplier is provided with a profile where they can see the history of their transactions with the company.
+        </p>
+    </div>
+    <br>
+
+    <!-- Features Section -->
+    <div class="features-section">
+        <h2 class="section-heading"><i class="fas fa-star"></i> Features</h2>
+        <ul class="features-list">
+            <li><i class="fas fa-chart-line"></i> Interactive Chart to display current available stock</li>
+            <li><i class="fas fa-box"></i> Stock details like current available stock are maintained</li>
+            <li><i class="fas fa-truck"></i> Incoming transactions are done through purchases</li>
+            <li><i class="fas fa-cart-arrow-down"></i> Outgoing transactions are done through sales</li>
+            <li><i class="fas fa-history"></i> Every transaction performed through the software is recorded</li>
+            <li><i class="fas fa-file-invoice"></i> Bill is dynamically rendered and can be printed</li>
+            <li><i class="fas fa-user-tie"></i> Separate profiles are maintained for suppliers</li>
+        </ul>
+    </div>
+    <br>
+
+    <!-- Developer Section -->
+    <div class="developer-section text-center">
+        <h2 class="section-heading"><i class="fas fa-code"></i> Developer</h2>
+        <p class="developer-text">Josam Eneza Mmbuji</p>
+        <br><br><br>
+    </div>
+
+{% endblock content %}
